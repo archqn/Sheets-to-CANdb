@@ -87,7 +87,23 @@ BO_ 23 GR_Inverter_Status: 19 GR_Inverter_1
 
 BO_ 24 GR_Inverter_Config: 5 GR_Inverter_1
 
-BO_ 25 Fan_Config: 4 Fan_Controller_1
+BO_ 25 Fan_Status: 5 Fan_Controller_1
+
+BO_ 26 Fan_Config: 4 Fan_Controller_1
+
+BO_ 27 Dash_Status: 1 Dash_Panel
+
+BO_ 28 Dash_Config: 7 Dash_Panel
+
+BO_ 29 Steering_Status: 2 Steering_Wheel
+
+BO_ 30 Steering_Config: 0 Steering_Wheel
+
+BO_ 31 SAM_Brake_Temp: 4 SAM1
+
+BO_ 32 SAM_Tire_Gradient: 8 SAM1
+
+BO_ 33 SAM_IMU: 20 SAM1
 
 BO_ 238 Debug_Enable: 2 Debugger
 

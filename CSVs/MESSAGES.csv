@@ -24,13 +24,13 @@ MSG ID,Message Name,Length,Sender
 0x016,DTI set Relative AC Brake Current,2.0,DTI_Inverter
 0x017,GR Inverter Status,19.0,GR_Inverter_1
 0x018,GR Inverter Config,5.0,GR_Inverter_1
-0x018,Fan Status,5.0,Fan_Controller_1
-0x019,Fan Config,4.0,Fan_Controller_1
-0x018,Dash Status,1.0,Dash_Panel
-0x018,Dash Config,7.0,Dash_Panel
-0x018,Steering Status,2.0,Steering_Wheel
-0x018,Steering Config,0.0,Steering_Wheel
-0x019,SAM Brake Temp,4.0,SAM1
-0x018,SAM Tire Gradient,8.0,SAM1
-0x019,SAM IMU,20.0,SAM1
+0x019,Fan Status,5.0,Fan_Controller_1
+0x01A,Fan Config,4.0,Fan_Controller_1
+0x01B,Dash Status,1.0,Dash_Panel
+0x01C,Dash Config,7.0,Dash_Panel
+0x01D,Steering Status,2.0,Steering_Wheel
+0x01E,Steering Config,0.0,Steering_Wheel
+0x01F,SAM Brake Temp,4.0,SAM1
+0x020,SAM Tire Gradient,8.0,SAM1
+0x021,SAM IMU,20.0,SAM1
 0x0EE,Debug Enable,2.0,Debugger
