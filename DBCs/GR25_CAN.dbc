@@ -39,6 +39,58 @@ BU_: ECU Debugger ACU TCM Dash_Panel Steering_Wheel DTI_Inverter GR_Inverter_1 G
 BO_ 2147483648 Ping: 8 ECU
  SG_ Millis : 7|32@0- (1,0) [-214748.3648|214748.3647] "ms" Vector__XXX
 
+BO_ 1 Ping: 4 ECU
+
+BO_ 2 ECU_status: 44 ECU
+
+BO_ 3 ECU_config: 0 ECU
+
+BO_ 4 ACU_Status: 24 ACU
+
+BO_ 5 ACU_Precharge: 1 ACU
+
+BO_ 6 ACU_Config_Charge_Parameters: 4 ACU
+
+BO_ 7 ACU_Config_Operational_Parameter: 2 ACU
+
+BO_ 8 ACU_Cell_Data_1: 64 ACU
+
+BO_ 9 ACU_Cell_Data_2: 64 ACU
+
+BO_ 10 ACU_Cell_Data_3: 64 ACU
+
+BO_ 11 ACU_Cell_Data_4: 64 ACU
+
+BO_ 12 ACU_Cell_Data_5: 64 ACU
+
+BO_ 13 LV_DC_DC_Status: 8 LV_DC_DC
+
+BO_ 14 DTI_Inverter_Status: 32 DTI_Inverter
+
+BO_ 15 DTI_Inverter_Config: 5 DTI_Inverter
+
+BO_ 16 DTI_Inverter_Config_Operational_: 9 DTI_Inverter
+
+BO_ 17 DTI_set_AC_Current: 2 DTI_Inverter
+
+BO_ 18 DTI_set_Target_Brake_Current: 2 DTI_Inverter
+
+BO_ 19 DTI_set_Target_ERPM: 4 DTI_Inverter
+
+BO_ 20 DTI_set_Target_Position: 2 DTI_Inverter
+
+BO_ 21 DTI_set_Relative_AC_Current: 2 DTI_Inverter
+
+BO_ 22 DTI_set_Relative_AC_Brake_Curren: 2 DTI_Inverter
+
+BO_ 23 GR_Inverter_Status: 19 GR_Inverter_1
+
+BO_ 24 GR_Inverter_Config: 5 GR_Inverter_1
+
+BO_ 25 Fan_Config: 4 Fan_Controller_1
+
+BO_ 238 Debug_Enable: 2 Debugger
+
 
 
 
@@ -54,6 +106,7 @@ BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
 BA_DEF_ BU_  "CANoeDrift" INT 0 0;
 BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
 BA_DEF_DEF_  "MultiplexExtEnabled" "No";
 BA_DEF_DEF_  "CANFD_BRS" "1";
 BA_DEF_DEF_  "DBName" "";
@@ -65,9 +118,13 @@ BA_DEF_DEF_  "CANoeJitterMin" 0;
 BA_DEF_DEF_  "CANoeDrift" 0;
 BA_DEF_DEF_  "CANoeStartDelay" 0;
 BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "SystemMessageLongSymbol" "";
 BA_ "BusType" "CAN FD";
 BA_ "DBName" "CAN_DBC";
 BA_ "VFrameFormat" BO_ 2147483648 1;
+BA_ "SystemMessageLongSymbol" BO_ 7 "ACU_Config_Operational_Parameters";
+BA_ "SystemMessageLongSymbol" BO_ 16 "DTI_Inverter_Config_Operational_Parameters";
+BA_ "SystemMessageLongSymbol" BO_ 22 "DTI_set_Relative_AC_Brake_Current";
 
 
 
