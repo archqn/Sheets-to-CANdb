@@ -1,0 +1,36 @@
+MSG ID,Message Name,Length,Sender
+0x000,Debug,64.0,Debugger
+0x001,Ping,4.0,ECU
+0x002,ECU status,44.0,ECU
+0x003,ECU config,0.0,ECU
+0x004,ACU Status,24.0,ACU
+0x005,ACU Precharge,1.0,ACU
+0x006,ACU Config Charge Parameters,4.0,ACU
+0x007,ACU Config Operational Parameters,2.0,ACU
+0x008,ACU Cell Data 1,64.0,ACU
+0x009,ACU Cell Data 2,64.0,ACU
+0x00A,ACU Cell Data 3,64.0,ACU
+0x00B,ACU Cell Data 4,64.0,ACU
+0x00C,ACU Cell Data 5,64.0,ACU
+0x00D,LV DC-DC Status,8.0,LV_DC_DC
+0x00E,DTI Inverter Status,32.0,DTI_Inverter
+0x00F,DTI Inverter Config,5.0,DTI_Inverter
+0x010,DTI Inverter Config Operational Parameters,9.0,DTI_Inverter
+0x011,DTI set AC Current,2.0,DTI_Inverter
+0x012,DTI set Target Brake Current,2.0,DTI_Inverter
+0x013,DTI set Target ERPM,4.0,DTI_Inverter
+0x014,DTI set Target Position,2.0,DTI_Inverter
+0x015,DTI set Relative AC Current,2.0,DTI_Inverter
+0x016,DTI set Relative AC Brake Current,2.0,DTI_Inverter
+0x017,GR Inverter Status,19.0,GR_Inverter_1
+0x018,GR Inverter Config,5.0,GR_Inverter_1
+0x019,Fan Status,5.0,Fan_Controller_1
+0x01A,Fan Config,4.0,Fan_Controller_1
+0x01B,Dash Status,1.0,Dash_Panel
+0x01C,Dash Config,7.0,Dash_Panel
+0x01D,Steering Status,2.0,Steering_Wheel
+0x01E,Steering Config,0.0,Steering_Wheel
+0x01F,SAM Brake Temp,4.0,SAM1
+0x020,SAM Tire Gradient,8.0,SAM1
+0x021,SAM IMU,20.0,SAM1
+0x0EE,Debug Enable,2.0,Debugger

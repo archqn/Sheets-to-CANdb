@@ -1,0 +1,1105 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ECU Debugger ACU TCM Dash_Panel Steering_Wheel DTI_Inverter GR_Inverter_1 GR_Inverter_2 GR_Inverter_3 GR_Inverter_4 Charging_SDC Fan_Controller_1 Fan_Controller_2 Fan_Controller_3 Fan_Controller_4 Fan_Controller_5 Fan_Controller_6 Fan_Controller_7 Fan_Controller_8 SAM1 SAM2 SAM3 SAM4 SAM5 SAM6 SAM7 SAM8 SAM9 SAM10 SAM11 SAM12 SAM13 SAM14 SAM15 SAM16 SAM17 SAM18 SAM19 SAM20 LV_DC_DC
+
+
+BO_ 2147483648 Ping: 8 ECU
+ SG_ Timestamp : 0|32@0+ (1,0) [0.0|0] "ms" Vector__XXX
+ SG_ Millis : 7|32@0- (1,0) [-214748.3648|214748.3647] "ms" Vector__XXX
+
+BO_ 1 Debug_FD: 64 Debugger
+ SG_ Debug : 0|512@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2 Ping: 4 ECU
+
+BO_ 3 ECU_Status_1: 8 ECU
+ SG_ GLV_State_of_Charge : 56|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+ SG_ Accumulator_State_of_Charge : 48|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+ SG_ Max_Cell_Temp : 40|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Power_Level : 32|4@0+ (1,0) [0.0|15.0] "~" Vector__XXX
+ SG_ Torque_Map : 36|4@0+ (1,0) [0.0|16.0] "~" Vector__XXX
+ SG_ Fan_Controller_4 : 16|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Fan_Controller_5 : 17|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Fan_Controller_6 : 18|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Fan_Controller_7 : 19|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Fan_Controller_8 : 20|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Dash : 21|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Steering : 22|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Reserved_for_future_use : 23|9@0+ (1,0) [0|0] "~" Vector__XXX
+ SG_ ACU_Node_Status_ : 8|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ GR_Inv_1_Status : 9|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ GR_Inv_2_Status : 10|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ GR_Inv_3_Status : 11|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ GR_Inv_4_Status : 12|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Fan_Controller_1 : 13|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Fan_Controller_2 : 14|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Fan_Controller_3 : 15|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ ECU_State : 0|8@0+ (1,0) [0|0] "Bool" Vector__XXX
+
+BO_ 4 ECU_Status_2: 8 ECU
+ SG_ FL_Wheel_RPM : 48|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+ SG_ FR_Wheel_RPM : 32|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+ SG_ Vehicle_Speed : 16|16@0+ (1,0) [0.0|65535.0] "MPH" Vector__XXX
+ SG_ Tractive_System_Voltage : 0|16@0+ (1,0) [0.0|65535.0] "Volts" Vector__XXX
+
+BO_ 5 ECU_Status_3: 4 ECU
+ SG_ RL_Wheel_RPM : 16|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+ SG_ RR_Wheel_RPM : 0|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+
+BO_ 6 ECU_config: 0 ECU
+ SG_ Reserved : 0|1@0+ (1,0) [0|0] "~" Vector__XXX
+
+BO_ 7 ACU_Status_1: 8 ECU
+ SG_ GLV_SOC : 56|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+ SG_ Accumulator_SOC : 48|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+ SG_ Accumulator_Current : 32|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+ SG_ TS_Voltage : 16|16@0+ (1,0) [0.0|65535.0] "Volts" Vector__XXX
+ SG_ Accumulator_Voltage : 0|16@0+ (1,0) [0.0|65535.0] "Volts" Vector__XXX
+
+BO_ 8 ACU_Status_2: 8 ECU
+ SG_ IR____Precharge_State : 56|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ IR__State : 57|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Software_Latch : 58|6@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Precharge_Error : 48|8@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Over_Temp_Error : 40|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Over_Voltage_Error : 41|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Under_Voltage_Error : 42|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Over_Current_Error : 43|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Under_Current_Error : 44|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Under_Voltage_20v_Warning : 45|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Under_Voltage_12v_Warning : 46|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Under_Voltage_SDC_Warning : 47|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Max_Cell_Temp : 32|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Min_Cell_Voltage : 24|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ SDC_Voltage : 16|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ v12v_Voltage : 8|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ v20v_Voltage : 0|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+
+BO_ 9 ACU_Status_3: 8 ECU
+ SG_ HV_Output_Current : 48|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+ SG_ HV_Input_Current : 32|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+ SG_ HV_Output_Voltage : 16|16@0+ (1,0) [0.0|65535.0] "Volts" Vector__XXX
+ SG_ HV_Input_Voltage : 0|16@0+ (1,0) [0.0|65535.0] "Volts" Vector__XXX
+
+BO_ 10 ACU_Precharge: 1 ECU
+ SG_ Set_TS_Active : 0|8@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+
+BO_ 11 ACU_Config_Charge_Parameters: 4 ECU
+ SG_ Charge_Current : 16|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+ SG_ Charge_Voltage : 0|16@0+ (1,0) [0.0|65535.0] "Volts" Vector__XXX
+
+BO_ 12 ACU_Config_Operational_Parameter: 2 ECU
+ SG_ Max_Cell_Temperature : 8|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Minimium_Cell_Voltage : 0|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+
+BO_ 13 ACU_Cell_Data_1: 64 ECU
+ SG_ Cell_31_Temp : 504|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_31_Voltage : 496|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_30_Temp : 488|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_30_Voltage : 480|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_29_Temp : 472|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_29_Voltage : 464|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_28_Temp : 456|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_28_Voltage : 448|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_27_Temp : 440|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_27_Voltage : 432|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_26_Temp : 424|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_26_Voltage : 416|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_25_Temp : 408|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_25_Voltage : 400|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_24_Temp : 392|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_24_Voltage : 384|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_23_Temp : 376|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_23_Voltage : 368|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_22_Temp : 360|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_22_Voltage : 352|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_21_Temp : 344|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_21_Voltage : 336|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_20_Temp : 328|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_20_Voltage : 320|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_19_Temp : 312|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_19_Voltage : 304|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_18_Temp : 296|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_18_Voltage : 288|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_17_Temp : 280|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_17_Voltage : 272|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_16_Temp : 264|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_16_Voltage : 256|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_15_Temp : 248|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_15_Voltage : 240|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_14_Temp : 232|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_14_Voltage : 224|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_13_Temp : 216|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_13_Voltage : 208|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_12_Temp : 200|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_12_Voltage : 192|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_11_Temp : 184|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_11_Voltage : 176|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_10_Temp : 168|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_10_Voltage : 160|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_9_Temp : 152|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_9_Voltage : 144|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_8_Temp : 136|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_8_Voltage : 128|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_7_Temp : 120|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_7_Voltage : 112|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_6_Temp : 104|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_6_Voltage : 96|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_5_Temp : 88|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_5_Voltage : 80|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_4_Temp : 72|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_4_Voltage : 64|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_3_Temp : 56|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_3_Voltage : 48|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_2_Temp : 40|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_2_Voltage : 32|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_1_Temp : 24|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_1_Voltage : 16|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_0_Temp : 8|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_0_Voltage : 0|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+
+BO_ 14 ACU_Cell_Data_2: 64 ECU
+ SG_ Cell_63_Temp : 504|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_63_Voltage : 496|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_62_Temp : 488|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_62_Voltage : 480|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_61_Temp : 472|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_61_Voltage : 464|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_60_Temp : 456|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_60_Voltage : 448|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_59_Temp : 440|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_59_Voltage : 432|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_58_Temp : 424|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_58_Voltage : 416|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_57_Temp : 408|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_57_Voltage : 400|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_56_Temp : 392|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_56_Voltage : 384|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_55_Temp : 376|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_55_Voltage : 368|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_54_Temp : 360|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_54_Voltage : 352|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_53_Temp : 344|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_53_Voltage : 336|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_52_Temp : 328|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_52_Voltage : 320|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_51_Temp : 312|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_51_Voltage : 304|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_50_Temp : 296|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_50_Voltage : 288|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_49_Temp : 280|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_49_Voltage : 272|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_48_Temp : 264|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_48_Voltage : 256|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_47_Temp : 248|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_47_Voltage : 240|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_46_Temp : 232|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_46_Voltage : 224|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_45_Temp : 216|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_45_Voltage : 208|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_44_Temp : 200|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_44_Voltage : 192|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_43_Temp : 184|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_43_Voltage : 176|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_42_Temp : 168|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_42_Voltage : 160|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_41_Temp : 152|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_41_Voltage : 144|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_40_Temp : 136|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_40_Voltage : 128|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_39_Temp : 120|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_39_Voltage : 112|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_38_Temp : 104|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_38_Voltage : 96|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_37_Temp : 88|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_37_Voltage : 80|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_36_Temp : 72|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_36_Voltage : 64|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_35_Temp : 56|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_35_Voltage : 48|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_34_Temp : 40|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_34_Voltage : 32|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_33_Temp : 24|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_33_Voltage : 16|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_32_Temp : 8|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_32_Voltage : 0|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+
+BO_ 15 ACU_Cell_Data_3: 64 ECU
+ SG_ Cell_95_Temp : 504|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_95_Voltage : 496|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_94_Temp : 488|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_94_Voltage : 480|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_93_Temp : 472|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_93_Voltage : 464|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_92_Temp : 456|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_92_Voltage : 448|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_91_Temp : 440|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_91_Voltage : 432|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_90_Temp : 424|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_90_Voltage : 416|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_89_Temp : 408|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_89_Voltage : 400|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_88_Temp : 392|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_88_Voltage : 384|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_87_Temp : 376|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_87_Voltage : 368|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_86_Temp : 360|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_86_Voltage : 352|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_85_Temp : 344|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_85_Voltage : 336|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_84_Temp : 328|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_84_Voltage : 320|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_83_Temp : 312|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_83_Voltage : 304|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_82_Temp : 296|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_82_Voltage : 288|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_81_Temp : 280|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_81_Voltage : 272|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_80_Temp : 264|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_80_Voltage : 256|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_79_Temp : 248|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_79_Voltage : 240|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_78_Temp : 232|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_78_Voltage : 224|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_77_Temp : 216|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_77_Voltage : 208|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_76_Temp : 200|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_76_Voltage : 192|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_75_Temp : 184|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_75_Voltage : 176|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_74_Temp : 168|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_74_Voltage : 160|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_73_Temp : 152|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_73_Voltage : 144|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_72_Temp : 136|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_72_Voltage : 128|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_71_Temp : 120|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_71_Voltage : 112|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_70_Temp : 104|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_70_Voltage : 96|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_69_Temp : 88|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_69_Voltage : 80|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_68_Temp : 72|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_68_Voltage : 64|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_67_Temp : 56|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_67_Voltage : 48|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_66_Temp : 40|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_66_Voltage : 32|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_65_Temp : 24|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_65_Voltage : 16|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_64_Temp : 8|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_64_Voltage : 0|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+
+BO_ 16 ACU_Cell_Data_4: 64 ECU
+ SG_ Cell_127_Temp : 504|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_127_Voltage : 496|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_126_Temp : 488|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_126_Voltage : 480|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_125_Temp : 472|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_125_Voltage : 464|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_124_Temp : 456|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_124_Voltage : 448|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_123_Temp : 440|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_123_Voltage : 432|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_122_Temp : 424|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_122_Voltage : 416|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_121_Temp : 408|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_121_Voltage : 400|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_120_Temp : 392|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_120_Voltage : 384|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_119_Temp : 376|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_119_Voltage : 368|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_118_Temp : 360|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_118_Voltage : 352|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_117_Temp : 344|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_117_Voltage : 336|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_116_Temp : 328|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_116_Voltage : 320|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_115_Temp : 312|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_115_Voltage : 304|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_114_Temp : 296|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_114_Voltage : 288|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_113_Temp : 280|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_113_Voltage : 272|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_112_Temp : 264|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_112_Voltage : 256|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_111_Temp : 248|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_111_Voltage : 240|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_110_Temp : 232|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_110_Voltage : 224|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_109_Temp : 216|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_109_Voltage : 208|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_108_Temp : 200|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_108_Voltage : 192|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_107_Temp : 184|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_107_Voltage : 176|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_106_Temp : 168|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_106_Voltage : 160|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_105_Temp : 152|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_105_Voltage : 144|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_104_Temp : 136|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_104_Voltage : 128|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_103_Temp : 120|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_103_Voltage : 112|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_102_Temp : 104|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_102_Voltage : 96|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_101_Temp : 88|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_101_Voltage : 80|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_100_Temp : 72|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_100_Voltage : 64|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_99_Temp : 56|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_99_Voltage : 48|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_98_Temp : 40|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_98_Voltage : 32|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_97_Temp : 24|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_97_Voltage : 16|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_96_Temp : 8|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_96_Voltage : 0|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+
+BO_ 17 ACU_Cell_Data_5: 64 ECU
+ SG_ Cell_159_Temp : 504|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_159_Voltage : 496|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_158_Temp : 488|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_158_Voltage : 480|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_157_Temp : 472|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_157_Voltage : 464|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_156_Temp : 456|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_156_Voltage : 448|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_155_Temp : 440|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_155_Voltage : 432|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_154_Temp : 424|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_154_Voltage : 416|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_153_Temp : 408|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_153_Voltage : 400|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_152_Temp : 392|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_152_Voltage : 384|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_151_Temp : 376|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_151_Voltage : 368|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_150_Temp : 360|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_150_Voltage : 352|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_149_Temp : 344|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_149_Voltage : 336|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_148_Temp : 328|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_148_Voltage : 320|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_147_Temp : 312|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_147_Voltage : 304|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_146_Temp : 296|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_146_Voltage : 288|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_145_Temp : 280|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_145_Voltage : 272|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_144_Temp : 264|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_144_Voltage : 256|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_143_Temp : 248|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_143_Voltage : 240|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_142_Temp : 232|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_142_Voltage : 224|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_141_Temp : 216|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_141_Voltage : 208|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_140_Temp : 200|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_140_Voltage : 192|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_139_Temp : 184|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_139_Voltage : 176|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_138_Temp : 168|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_138_Voltage : 160|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_137_Temp : 152|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_137_Voltage : 144|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_136_Temp : 136|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_136_Voltage : 128|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_135_Temp : 120|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_135_Voltage : 112|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_134_Temp : 104|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_134_Voltage : 96|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_133_Temp : 88|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_133_Voltage : 80|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_132_Temp : 72|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_132_Voltage : 64|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_131_Temp : 56|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_131_Voltage : 48|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_130_Temp : 40|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_130_Voltage : 32|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_129_Temp : 24|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_129_Voltage : 16|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Cell_128_Temp : 8|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Cell_128_Voltage : 0|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+
+BO_ 18 DC_DC_Status: 8 ECU
+ SG_ Output_Current : 48|16@0+ (1,0) [0.0|16383.0] "Amps" Vector__XXX
+ SG_ Input_Current : 32|16@0+ (1,0) [0.0|16383.0] "Amps" Vector__XXX
+ SG_ Output_Voltage : 16|16@0+ (1,0) [0.0|16383.0] "Volts" Vector__XXX
+ SG_ DC_DC_Temp : 0|1@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Input_Voltage : 0|16@0+ (1,0) [0.0|16383.0] "Volts" Vector__XXX
+
+BO_ 19 Inverter_Status_1: 6 ECU
+ SG_ Motor_RPM : 32|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+ SG_ DC_current : 16|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+ SG_ AC_current : 0|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+
+BO_ 20 Inverter_Status_2: 6 ECU
+ SG_ W_MOSFET_temperature : 32|16@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ V_MOSFET_temperature : 16|16@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ U_MOSFET_temperature : 0|16@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+
+BO_ 21 Inverter_Status_3: 3 ECU
+ SG_ Over_voltage_faults : 16|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Under_voltage_fault : 17|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Inv__overtemp_fault : 18|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Motor_overtemp_fault : 19|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Transistor_fault : 20|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Encoder_fault : 21|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ CAN_fault : 22|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Future_use : 23|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Motor_temperature : 0|16@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+
+BO_ 22 Inverter_Config: 7 ECU
+ SG_ Motor_direction : 48|1@0+ (1,0) [0.0|1.0] "Enable" Vector__XXX
+ SG_ Field_weakening : 49|7@0+ (1,0) [0.0|1.0] "Enable" Vector__XXX
+ SG_ Absolute_Max_RPM_Limit : 32|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+ SG_ Max_DC_Current : 16|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+ SG_ Max_AC_Current : 0|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+
+BO_ 23 Inverter_Command: 7 ECU
+ SG_ Drive_enable : 48|8@0+ (1,0) [0.0|1.0] "Enable" Vector__XXX
+ SG_ RPM_Limit : 32|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+ SG_ Set_DC_Current : 16|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+ SG_ Set_AC_Current : 0|16@0+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
+
+BO_ 24 Fan_Status: 4 ECU
+ SG_ Input_Current : 24|8@0+ (1,0) [0.0|255.0] "Amps" Vector__XXX
+ SG_ Input_Voltage : 16|8@0+ (1,0) [0.0|255.0] "Volts" Vector__XXX
+ SG_ Fan_Speed : 0|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+
+BO_ 25 Fan_Command: 1 ECU
+ SG_ Fan_Command : 0|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+
+BO_ 26 Dash_Status: 3 ECU
+ SG_ RTD_Button_Data : 16|8@0+ (1,0) [-128.0|127.0] "Seconds" Vector__XXX
+ SG_ TS_Button_Data : 8|8@0+ (1,0) [-128.0|127.0] "Seconds" Vector__XXX
+ SG_ BMS_LED : 0|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ IMD_LED : 1|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ BSPD_LED : 2|6@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+
+BO_ 27 Dash_Config: 7 ECU
+ SG_ Button_LED_2_B : 48|8@0+ (1,0) [0.0|255.0] "RGB" Vector__XXX
+ SG_ Button_LED_2_G : 40|8@0+ (1,0) [0.0|255.0] "RGB" Vector__XXX
+ SG_ Button_LED_2_R : 32|8@0+ (1,0) [0.0|255.0] "RGB" Vector__XXX
+ SG_ Button_LED_1_B : 24|8@0+ (1,0) [0.0|255.0] "RGB" Vector__XXX
+ SG_ Button_LED_1_G : 16|8@0+ (1,0) [0.0|255.0] "RGB" Vector__XXX
+ SG_ Button_LED_1_R : 8|8@0+ (1,0) [0.0|255.0] "RGB" Vector__XXX
+ SG_ BMS_LED : 0|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ IMD_LED : 1|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ BSPD_LED : 2|6@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+
+BO_ 28 Steering_Status: 4 ECU
+ SG_ Regen : 8|1@0+ (1,0) [0.0|255.0] "Position" Vector__XXX
+ SG_ Button_1 : 9|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Button_2 : 10|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Button_3 : 11|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Button_4 : 12|20@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Current_Encoder : 0|4@0+ (1,0) [0.0|15.0] "Position" Vector__XXX
+ SG_ Torque_Map_Encoder : 4|4@0+ (1,0) [0.0|15.0] "Position" Vector__XXX
+
+BO_ 29 Steering_Config: 0 ECU
+ SG_ Reserved : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 30 SAM_Brake_IR: 1 ECU
+ SG_ Temp : 0|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+
+BO_ 31 SAM_Tire_Temp: 4 ECU
+ SG_ Inside_Temp : 24|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Inside_Middle_Temp : 16|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Outside_Middle_Temp : 8|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Outside_Temp : 0|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+
+BO_ 32 SAM_IMU: 12 ECU
+ SG_ Gyro_Z : 80|16@0+ (1,0) [0.0|65535.0] "Meters/s^2" Vector__XXX
+ SG_ Gyro_Y : 64|16@0+ (1,0) [0.0|65535.0] "Meters/s^2" Vector__XXX
+ SG_ Gyro_X : 48|16@0+ (1,0) [0.0|65535.0] "Meters/s^2" Vector__XXX
+ SG_ Accel_Z : 32|16@0+ (1,0) [0.0|65535.0] "Meters/s^2" Vector__XXX
+ SG_ Accel_Y : 16|16@0+ (1,0) [0.0|65535.0] "Meters/s^2" Vector__XXX
+ SG_ Accel_X : 0|16@0+ (1,0) [0.0|65535.0] "Meters/s^2" Vector__XXX
+
+BO_ 33 SAM_GPS_1: 8 ECU
+ SG_ Long : 32|32@0+ (1,0) [0.0|0] "Degrees" Vector__XXX
+ SG_ Lat : 0|32@0+ (1,0) [0.0|0] "Degrees" Vector__XXX
+
+BO_ 34 SAM_GPS_2: 8 ECU
+ SG_ Attitude : 32|32@0+ (1,0) [0.0|0] "" Vector__XXX
+ SG_ Accuracy : 0|32@0+ (1,0) [0.0|0] "" Vector__XXX
+
+BO_ 35 SAM_GPS_Time: 8 ECU
+ SG_ Time_of_Week_Ms : 32|32@0+ (1,0) [0.0|0] "" Vector__XXX
+ SG_ Time : 0|32@0+ (1,0) [0.0|0] "" Vector__XXX
+
+BO_ 36 SAM_GPS_Heading: 4 ECU
+ SG_ Heading_from_North : 0|32@0+ (1,0) [0.0|0] "" Vector__XXX
+
+BO_ 37 SAM_Sus_Pots: 1 ECU
+ SG_ Suspension_Angle : 0|8@0+ (1,0) [0.0|255.0] "degrees" Vector__XXX
+
+BO_ 38 SAM_TOF: 2 ECU
+ SG_ Height : 0|16@0+ (1,0) [0.0|65535.0] "mm" Vector__XXX
+
+BO_ 39 SAM_Rear_Wheelspeed: 2 ECU
+ SG_ Speed : 0|16@0+ (1,0) [0.0|65535.0] "RPM" Vector__XXX
+
+BO_ 41 TCM_Status: 8 ECU
+ SG_ Cache_Size : 24|32@0+ (1,0) [0.0|0] "#" Vector__XXX
+ SG_ Ping : 8|16@0+ (1,0) [0.0|65535.0] "ms" Vector__XXX
+ SG_ Connection_Status : 0|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ MQTT_Status : 1|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Epic_Shelter_Status : 2|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Camera_Status : 3|1@0+ (1,0) [0.0|1.0] "Bool" Vector__XXX
+ SG_ Reserved : 4|4@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 42 TCM_Resource_Utilization: 7 ECU
+ SG_ GPU_Temp : 48|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ CPU_Temp : 40|8@0+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
+ SG_ Power_Consumption : 32|8@0+ (1,0) [0.0|255.0] "Watts" Vector__XXX
+ SG_ Storage_Usage : 24|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+ SG_ Memory_Usage : 16|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+ SG_ GPU_Usage : 8|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+ SG_ CPU_Usage : 0|8@0+ (1,0) [0.0|255.0] "%" Vector__XXX
+
+
+
+
+CM_ SG_ 2147483648 Timestamp "Time in millis";
+CM_ SG_ 1 Debug "Essentially a print statement up to 64 bytes long that whichever targeted can parse";
+CM_ SG_ 3 GLV_State_of_Charge "% charged of the Low Voltage Bat";
+CM_ SG_ 3 Accumulator_State_of_Charge "% charged of the Accumulator";
+CM_ SG_ 3 Max_Cell_Temp "the temperature of the hottest cell of the accumulator";
+CM_ SG_ 3 Power_Level "Controls the AC current limits to each of the inverters
+Discrete Mapping, actual values TBD (16 possible values)";
+CM_ SG_ 3 Torque_Map "The torque map selected; torque map is the mapping of the throttle to the torque sent to each motor";
+CM_ SG_ 3 Fan_Controller_4 "1: OK, 0: Timeout";
+CM_ SG_ 3 Fan_Controller_5 "1: OK, 0: Timeout";
+CM_ SG_ 3 Fan_Controller_6 "1: OK, 0: Timeout";
+CM_ SG_ 3 Fan_Controller_7 "1: OK, 0: Timeout";
+CM_ SG_ 3 Fan_Controller_8 "1: OK, 0: Timeout";
+CM_ SG_ 3 Dash "1: OK, 0: Timeout";
+CM_ SG_ 3 Steering "1: OK, 0: Timeout";
+CM_ SG_ 3 Reserved_for_future_use "";
+CM_ SG_ 3 ACU_Node_Status_ "1: OK, 0: Timeout";
+CM_ SG_ 3 GR_Inv_1_Status "1: OK, 0: Timeout";
+CM_ SG_ 3 GR_Inv_2_Status "1: OK, 0: Timeout";
+CM_ SG_ 3 GR_Inv_3_Status "1: OK, 0: Timeout";
+CM_ SG_ 3 GR_Inv_4_Status "1: OK, 0: Timeout";
+CM_ SG_ 3 Fan_Controller_1 "1: OK, 0: Timeout";
+CM_ SG_ 3 Fan_Controller_2 "1: OK, 0: Timeout";
+CM_ SG_ 3 Fan_Controller_3 "1: OK, 0: Timeout";
+CM_ SG_ 3 ECU_State "See diagram";
+CM_ SG_ 4 FL_Wheel_RPM "Wheel RPM";
+CM_ SG_ 4 FR_Wheel_RPM "Wheel RPM";
+CM_ SG_ 4 Vehicle_Speed "Absolute value of speed";
+CM_ SG_ 4 Tractive_System_Voltage "Output terminal voltage of accumulator";
+CM_ SG_ 5 RL_Wheel_RPM "Wheel RPM";
+CM_ SG_ 5 RR_Wheel_RPM "Wheel RPM";
+CM_ SG_ 6 Reserved "Reserved, Currently all selection will be done in response to Dash & Steering status messages";
+CM_ SG_ 7 GLV_SOC "GLV state of charge";
+CM_ SG_ 7 Accumulator_SOC "Accumulator state of charge (Based on lowest cell)";
+CM_ SG_ 7 Accumulator_Current "Current output of accumulator";
+CM_ SG_ 7 TS_Voltage "Output terminal voltage of accumulator";
+CM_ SG_ 7 Accumulator_Voltage "All cell voltages added up";
+CM_ SG_ 8 IR____Precharge_State "0: Open           1: Closed";
+CM_ SG_ 8 IR__State "0: Open           1: Closed";
+CM_ SG_ 8 Software_Latch "0: Open           1: Closed";
+CM_ SG_ 8 Precharge_Error "Precharge timed out";
+CM_ SG_ 8 Over_Temp_Error "Over temp (>60c)";
+CM_ SG_ 8 Over_Voltage_Error "Over voltage (>4.2v per cell)";
+CM_ SG_ 8 Under_Voltage_Error "Under voltage (<2.5v per cell)";
+CM_ SG_ 8 Over_Current_Error "Over current (discharge)";
+CM_ SG_ 8 Under_Current_Error "Over current (charging)";
+CM_ SG_ 8 Under_Voltage_20v_Warning "20v GLV too low (<15?)";
+CM_ SG_ 8 Under_Voltage_12v_Warning "12v supply too low (<10?)";
+CM_ SG_ 8 Under_Voltage_SDC_Warning "SDC too low (<9?)";
+CM_ SG_ 8 Max_Cell_Temp "Hottest cell in accumulator";
+CM_ SG_ 8 Min_Cell_Voltage "Lowest cell voltage in accumulator";
+CM_ SG_ 8 SDC_Voltage "Voltage before ACU Latch";
+CM_ SG_ 8 v12v_Voltage "12v supply voltage";
+CM_ SG_ 8 v20v_Voltage "20v GLV voltage";
+CM_ SG_ 9 HV_Output_Current "20v output current";
+CM_ SG_ 9 HV_Input_Current "600v input current";
+CM_ SG_ 9 HV_Output_Voltage "20v output voltage";
+CM_ SG_ 9 HV_Input_Voltage "600v input voltage";
+CM_ SG_ 10 Set_TS_Active "0: shutdown, 1: go TS Active/Precharge";
+CM_ SG_ 11 Charge_Current "Sets the Target Charging Current";
+CM_ SG_ 11 Charge_Voltage "Sets the Target Charging voltage";
+CM_ SG_ 12 Max_Cell_Temperature "Sets the threshold for Max Cell Temperature before Shutdown";
+CM_ SG_ 12 Minimium_Cell_Voltage "Sets the threshold for Minimum Cell Voltage before Shutdown";
+CM_ SG_ 13 Cell_31_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_31_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_30_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_30_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_29_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_29_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_28_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_28_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_27_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_27_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_26_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_26_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_25_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_25_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_24_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_24_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_23_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_23_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_22_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_22_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_21_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_21_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_20_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_20_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_19_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_19_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_18_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_18_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_17_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_17_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_16_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_16_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_15_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_15_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_14_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_14_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_13_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_13_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_12_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_12_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_11_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_11_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_10_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_10_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_9_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_9_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_8_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_8_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_7_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_7_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_6_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_6_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_5_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_5_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_4_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_4_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_3_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_3_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_2_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_2_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_1_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_1_Voltage "Cell  n voltage";
+CM_ SG_ 13 Cell_0_Temp "Cell n temperature";
+CM_ SG_ 13 Cell_0_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_63_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_63_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_62_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_62_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_61_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_61_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_60_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_60_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_59_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_59_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_58_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_58_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_57_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_57_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_56_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_56_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_55_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_55_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_54_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_54_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_53_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_53_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_52_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_52_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_51_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_51_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_50_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_50_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_49_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_49_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_48_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_48_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_47_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_47_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_46_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_46_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_45_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_45_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_44_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_44_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_43_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_43_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_42_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_42_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_41_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_41_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_40_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_40_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_39_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_39_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_38_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_38_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_37_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_37_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_36_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_36_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_35_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_35_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_34_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_34_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_33_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_33_Voltage "Cell  n voltage";
+CM_ SG_ 14 Cell_32_Temp "Cell n temperature";
+CM_ SG_ 14 Cell_32_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_95_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_95_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_94_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_94_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_93_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_93_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_92_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_92_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_91_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_91_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_90_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_90_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_89_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_89_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_88_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_88_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_87_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_87_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_86_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_86_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_85_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_85_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_84_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_84_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_83_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_83_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_82_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_82_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_81_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_81_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_80_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_80_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_79_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_79_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_78_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_78_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_77_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_77_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_76_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_76_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_75_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_75_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_74_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_74_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_73_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_73_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_72_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_72_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_71_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_71_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_70_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_70_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_69_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_69_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_68_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_68_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_67_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_67_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_66_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_66_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_65_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_65_Voltage "Cell  n voltage";
+CM_ SG_ 15 Cell_64_Temp "Cell n temperature";
+CM_ SG_ 15 Cell_64_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_127_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_127_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_126_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_126_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_125_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_125_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_124_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_124_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_123_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_123_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_122_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_122_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_121_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_121_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_120_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_120_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_119_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_119_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_118_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_118_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_117_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_117_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_116_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_116_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_115_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_115_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_114_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_114_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_113_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_113_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_112_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_112_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_111_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_111_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_110_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_110_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_109_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_109_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_108_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_108_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_107_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_107_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_106_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_106_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_105_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_105_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_104_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_104_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_103_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_103_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_102_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_102_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_101_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_101_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_100_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_100_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_99_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_99_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_98_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_98_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_97_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_97_Voltage "Cell  n voltage";
+CM_ SG_ 16 Cell_96_Temp "Cell n temperature";
+CM_ SG_ 16 Cell_96_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_159_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_159_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_158_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_158_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_157_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_157_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_156_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_156_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_155_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_155_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_154_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_154_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_153_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_153_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_152_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_152_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_151_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_151_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_150_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_150_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_149_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_149_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_148_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_148_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_147_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_147_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_146_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_146_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_145_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_145_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_144_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_144_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_143_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_143_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_142_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_142_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_141_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_141_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_140_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_140_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_139_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_139_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_138_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_138_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_137_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_137_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_136_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_136_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_135_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_135_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_134_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_134_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_133_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_133_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_132_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_132_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_131_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_131_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_130_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_130_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_129_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_129_Voltage "Cell  n voltage";
+CM_ SG_ 17 Cell_128_Temp "Cell n temperature";
+CM_ SG_ 17 Cell_128_Voltage "Cell  n voltage";
+CM_ SG_ 18 Output_Current "Output current";
+CM_ SG_ 18 Input_Current "Input current (LV only. Send 0 for HV)";
+CM_ SG_ 18 Output_Voltage "~12v for LV and ~20v for HV";
+CM_ SG_ 18 DC_DC_Temp "Temp of DC-DC converter";
+CM_ SG_ 18 Input_Voltage "~20v for LV (LV only. Send 0 for HV)";
+CM_ SG_ 19 Motor_RPM "RPM, int16_t";
+CM_ SG_ 19 DC_current "0.01 * current, int16_t";
+CM_ SG_ 19 AC_current "0.01 * current, int16_t";
+CM_ SG_ 20 W_MOSFET_temperature "Celsius + 40, uint8_t";
+CM_ SG_ 20 V_MOSFET_temperature "Celsius + 40, uint8_t";
+CM_ SG_ 20 U_MOSFET_temperature "Celsius + 40, uint8_t";
+CM_ SG_ 21 Over_voltage_faults "TS above set max voltage";
+CM_ SG_ 21 Under_voltage_fault "TS below set min voltage";
+CM_ SG_ 21 Inv__overtemp_fault "Inverter over set max temp";
+CM_ SG_ 21 Motor_overtemp_fault "Motor over set max temp";
+CM_ SG_ 21 Transistor_fault "Mosfet or mosfet drive error";
+CM_ SG_ 21 Encoder_fault "Encoder communication or calc error";
+CM_ SG_ 21 CAN_fault "CAN message error or timeout";
+CM_ SG_ 21 Future_use "";
+CM_ SG_ 21 Motor_temperature "Celsius + 40, uint8_t";
+CM_ SG_ 22 Motor_direction "Write 1 inverts direction";
+CM_ SG_ 22 Field_weakening "Write 1 to enable field weakening";
+CM_ SG_ 22 Absolute_Max_RPM_Limit "0: No limit      n :limited at n RPM";
+CM_ SG_ 22 Max_DC_Current "Max DC Current";
+CM_ SG_ 22 Max_AC_Current "Max AC Current";
+CM_ SG_ 23 Drive_enable "Write this to 1 every 100ms to enable inverter";
+CM_ SG_ 23 RPM_Limit "0: No limit      n :limited at n RPM";
+CM_ SG_ 23 Set_DC_Current "Commanded DC Current";
+CM_ SG_ 23 Set_AC_Current "Commanded AC Current";
+CM_ SG_ 24 Input_Current "0-10";
+CM_ SG_ 24 Input_Voltage "0-22";
+CM_ SG_ 24 Fan_Speed "Fan RPM";
+CM_ SG_ 25 Fan_Command "0-100 Percent";
+CM_ SG_ 26 RTD_Button_Data "MSB is state (1: pressed)
+Other 7 bits represent the time in 0.1s that it has been in that state";
+CM_ SG_ 26 TS_Button_Data "MSB is state (1: pressed)
+Other 7 bits represent the time in 0.1s that it has been in that state";
+CM_ SG_ 26 BMS_LED "State of BMS LED";
+CM_ SG_ 26 IMD_LED "State of IMD LED";
+CM_ SG_ 26 BSPD_LED "State of BSPD LED";
+CM_ SG_ 27 Button_LED_2_B "RGB LED Brightness";
+CM_ SG_ 27 Button_LED_2_G "RGB LED Brightness";
+CM_ SG_ 27 Button_LED_2_R "RGB LED Brightness";
+CM_ SG_ 27 Button_LED_1_B "RGB LED Brightness";
+CM_ SG_ 27 Button_LED_1_G "RGB LED Brightness";
+CM_ SG_ 27 Button_LED_1_R "RGB LED Brightness";
+CM_ SG_ 27 BMS_LED "LED command (0: off, 1: on)";
+CM_ SG_ 27 IMD_LED "LED command (0: off, 1: on)";
+CM_ SG_ 27 BSPD_LED "LED command (0: off, 1: on)";
+CM_ SG_ 28 Regen "Position of knob (1-16)";
+CM_ SG_ 28 Button_1 "Button State";
+CM_ SG_ 28 Button_2 "Button State";
+CM_ SG_ 28 Button_3 "Button State";
+CM_ SG_ 28 Button_4 "Button State";
+CM_ SG_ 28 Current_Encoder "Position of knob (1-16)";
+CM_ SG_ 28 Torque_Map_Encoder "Position of knob (1-16)";
+CM_ SG_ 29 Reserved "Theoretically Steering wheel will just update based on ECU status";
+CM_ SG_ 30 Temp "IR Temp of Brakes";
+CM_ SG_ 31 Inside_Temp "Closest to chassis";
+CM_ SG_ 31 Inside_Middle_Temp "Middle of tire";
+CM_ SG_ 31 Outside_Middle_Temp "Middle of tire";
+CM_ SG_ 31 Outside_Temp "Furthest from chassis";
+CM_ SG_ 32 Gyro_Z "Angular velocity in Z-axis";
+CM_ SG_ 32 Gyro_Y "Angular velocity in Y-axis";
+CM_ SG_ 32 Gyro_X "Angular velocity in X-axis";
+CM_ SG_ 32 Accel_Z "Acceleration in Z-axis";
+CM_ SG_ 32 Accel_Y "Acceleration in Y-axis";
+CM_ SG_ 32 Accel_X "Acceleration in X-axis";
+CM_ SG_ 33 Long "Longitude in decimal degrees";
+CM_ SG_ 33 Lat "Latitude in decimal degrees";
+CM_ SG_ 34 Attitude "Vehicle attitude";
+CM_ SG_ 34 Accuracy "GPS position accuracy";
+CM_ SG_ 35 Time_of_Week_Ms "Time of week in milliseconds";
+CM_ SG_ 35 Time "Time in seconds since GPS Epoch";
+CM_ SG_ 36 Heading_from_North "Heading angle relative to true North";
+CM_ SG_ 37 Suspension_Angle "Pot Pos";
+CM_ SG_ 38 Height "Ride Height";
+CM_ SG_ 39 Speed "Wheel RPM";
+CM_ SG_ 41 Cache_Size "# of messages on cache (non-synced)";
+CM_ SG_ 41 Ping "Mapache ping (upload)";
+CM_ SG_ 41 Connection_Status "1: OK, 0: Timeout";
+CM_ SG_ 41 MQTT_Status "1: OK, 0: Timeout";
+CM_ SG_ 41 Epic_Shelter_Status "1: In Progress, 0: Idle";
+CM_ SG_ 41 Camera_Status "1: Recording, 0: Idle";
+CM_ SG_ 41 Reserved "Reserved";
+CM_ SG_ 42 GPU_Temp "";
+CM_ SG_ 42 CPU_Temp "";
+CM_ SG_ 42 Power_Consumption "";
+CM_ SG_ 42 Storage_Usage "";
+CM_ SG_ 42 Memory_Usage "";
+CM_ SG_ 42 GPU_Usage "";
+CM_ SG_ 42 CPU_Usage "";
+BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
+BA_DEF_DEF_  "MultiplexExtEnabled" "No";
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "SystemMessageLongSymbol" "";
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "CAN_DBC";
+BA_ "VFrameFormat" BO_ 2147483648 1;
+BA_ "SystemMessageLongSymbol" BO_ 12 "ACU_Config_Operational_Parameters";
+
+
+
+

@@ -1,0 +1,479 @@
+Message Name,Message Length,Bit Start,Signal Name,Comment,Min,Max,Factor,Unit,Signal Length,Byte Order,Signed
+Debug 2.0,8.0,0,Debug,Essentially a print statement up to 8 bytes long that whichever targeted can parse,,,,,64,big_endian,False
+Debug FD,64.0,0,Debug,Essentially a print statement up to 64 bytes long that whichever targeted can parse,,,,,512,big_endian,False
+Ping,4.0,0,Timestamp,Time in millis,0.0,,1.0,ms,32,big_endian,False
+ECU Status 1,8.0,0,ECU State,See diagram,,,,Bool,8,big_endian,False
+ECU Status 1,8.0,8,ACU Node Status ,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,9,GR Inv 1 Status,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,10,GR Inv 2 Status,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,11,GR Inv 3 Status,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,12,GR Inv 4 Status,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,13,Fan Controller 1,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,14,Fan Controller 2,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,15,Fan Controller 3,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,16,Fan Controller 4,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,17,Fan Controller 5,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,18,Fan Controller 6,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,19,Fan Controller 7,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,20,Fan Controller 8,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,21,Dash,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,22,Steering,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+ECU Status 1,8.0,23,Reserved for future use,,,,,~,9,big_endian,False
+ECU Status 1,8.0,32,Power Level,"Controls the AC current limits to each of the inverters
+Discrete Mapping, actual values TBD (16 possible values)",0.0,15.0,,~,4,big_endian,False
+ECU Status 1,8.0,36,Torque Map,The torque map selected; torque map is the mapping of the throttle to the torque sent to each motor,0.0,16.0,,~,4,big_endian,False
+ECU Status 1,8.0,40,Max Cell Temp,the temperature of the hottest cell of the accumulator,0.0,255.0,0.25,Celsius,8,big_endian,False
+ECU Status 1,8.0,48,Accumulator State of Charge,% charged of the Accumulator,0.0,255.0,,%,8,big_endian,False
+ECU Status 1,8.0,56,GLV State of Charge,% charged of the Low Voltage Bat,0.0,255.0,,%,8,big_endian,False
+ECU Status 2,8.0,0,Tractive System Voltage,Output terminal voltage of accumulator,0.0,65535.0,0.01,Volts,16,big_endian,False
+ECU Status 2,8.0,16,Vehicle Speed,Absolute value of speed,0.0,65535.0,0.01,MPH,16,big_endian,False
+ECU Status 2,8.0,32,FR Wheel RPM,Wheel RPM,0.0,65535.0,,RPM,16,big_endian,False
+ECU Status 2,8.0,48,FL Wheel RPM,Wheel RPM,0.0,65535.0,,RPM,16,big_endian,False
+ECU Status 3,4.0,0,RR Wheel RPM,Wheel RPM,0.0,65535.0,,RPM,16,big_endian,False
+ECU Status 3,4.0,16,RL Wheel RPM,Wheel RPM,0.0,65535.0,,RPM,16,big_endian,False
+ECU config,0.0,0,Reserved,"Reserved, Currently all selection will be done in response to Dash & Steering status messages",,,,~,1,big_endian,False
+ACU Status 1,8.0,0,Accumulator Voltage,All cell voltages added up,0.0,65535.0,0.01,Volts,16,big_endian,False
+ACU Status 1,8.0,16,TS Voltage,Output terminal voltage of accumulator,0.0,65535.0,0.01,Volts,16,big_endian,False
+ACU Status 1,8.0,32,Accumulator Current,Current output of accumulator,0.0,65535.0,,Amps,16,big_endian,False
+ACU Status 1,8.0,48,Accumulator SOC,Accumulator state of charge (Based on lowest cell),0.0,255.0,,%,8,big_endian,False
+ACU Status 1,8.0,56,GLV SOC,GLV state of charge,0.0,255.0,,%,8,big_endian,False
+ACU Status 2,8.0,0,v20v Voltage,20v GLV voltage,0.0,255.0,0.1,Volts,8,big_endian,False
+ACU Status 2,8.0,8,v12v Voltage,12v supply voltage,0.0,255.0,0.1,Volts,8,big_endian,False
+ACU Status 2,8.0,16,SDC Voltage,Voltage before ACU Latch,0.0,255.0,0.1,Volts,8,big_endian,False
+ACU Status 2,8.0,24,Min Cell Voltage,Lowest cell voltage in accumulator,0.0,255.0,,Volts,8,big_endian,False
+ACU Status 2,8.0,32,Max Cell Temp,Hottest cell in accumulator,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Status 2,8.0,40,Over Temp Error,Over temp (>60c),0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,41,Over Voltage Error,Over voltage (>4.2v per cell),0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,42,Under Voltage Error,Under voltage (<2.5v per cell),0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,43,Over Current Error,Over current (discharge),0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,44,Under Current Error,Over current (charging),0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,45,Under Voltage 20v Warning,20v GLV too low (<15?),0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,46,Under Voltage 12v Warning,12v supply too low (<10?),0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,47,Under Voltage SDC Warning,SDC too low (<9?),0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,48,Precharge Error,Precharge timed out,0.0,1.0,,Bool,8,big_endian,False
+ACU Status 2,8.0,56,IR- / Precharge State,0: Open           1: Closed,0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,57,IR+ State,0: Open           1: Closed,0.0,1.0,,Bool,1,big_endian,False
+ACU Status 2,8.0,58,Software Latch,0: Open           1: Closed,0.0,1.0,,Bool,6,big_endian,False
+ACU Status 3,8.0,0,HV Input Voltage,600v input voltage,0.0,65535.0,0.01,Volts,16,big_endian,False
+ACU Status 3,8.0,16,HV Output Voltage,20v output voltage,0.0,65535.0,0.01,Volts,16,big_endian,False
+ACU Status 3,8.0,32,HV Input Current,600v input current,0.0,65535.0,0.001,Amps,16,big_endian,False
+ACU Status 3,8.0,48,HV Output Current,20v output current,0.0,65535.0,0.001,Amps,16,big_endian,False
+ACU Precharge,1.0,0,Set TS Active,"0: shutdown, 1: go TS Active/Precharge",0.0,1.0,,Bool,8,big_endian,False
+ACU Config Charge Parameters,4.0,0,Charge Voltage,Sets the Target Charging voltage,0.0,65535.0,0.1,Volts,16,big_endian,False
+ACU Config Charge Parameters,4.0,16,Charge Current,Sets the Target Charging Current,0.0,65535.0,0.1,Amps,16,big_endian,False
+ACU Config Operational Parameters,2.0,0,Minimium Cell Voltage,Sets the threshold for Minimum Cell Voltage before Shutdown,0.0,255.0,,Volts,8,big_endian,False
+ACU Config Operational Parameters,2.0,8,Max Cell Temperature,Sets the threshold for Max Cell Temperature before Shutdown,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,0,Cell 0 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,8,Cell 0 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,16,Cell 1 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,24,Cell 1 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,32,Cell 2 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,40,Cell 2 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,48,Cell 3 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,56,Cell 3 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,64,Cell 4 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,72,Cell 4 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,80,Cell 5 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,88,Cell 5 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,96,Cell 6 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,104,Cell 6 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,112,Cell 7 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,120,Cell 7 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,128,Cell 8 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,136,Cell 8 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,144,Cell 9 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,152,Cell 9 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,160,Cell 10 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,168,Cell 10 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,176,Cell 11 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,184,Cell 11 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,192,Cell 12 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,200,Cell 12 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,208,Cell 13 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,216,Cell 13 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,224,Cell 14 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,232,Cell 14 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,240,Cell 15 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,248,Cell 15 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,256,Cell 16 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,264,Cell 16 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,272,Cell 17 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,280,Cell 17 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,288,Cell 18 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,296,Cell 18 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,304,Cell 19 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,312,Cell 19 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,320,Cell 20 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,328,Cell 20 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,336,Cell 21 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,344,Cell 21 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,352,Cell 22 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,360,Cell 22 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,368,Cell 23 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,376,Cell 23 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,384,Cell 24 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,392,Cell 24 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,400,Cell 25 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,408,Cell 25 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,416,Cell 26 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,424,Cell 26 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,432,Cell 27 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,440,Cell 27 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,448,Cell 28 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,456,Cell 28 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,464,Cell 29 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,472,Cell 29 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,480,Cell 30 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,488,Cell 30 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 1,64.0,496,Cell 31 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 1,64.0,504,Cell 31 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,0,Cell 32 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,8,Cell 32 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,16,Cell 33 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,24,Cell 33 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,32,Cell 34 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,40,Cell 34 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,48,Cell 35 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,56,Cell 35 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,64,Cell 36 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,72,Cell 36 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,80,Cell 37 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,88,Cell 37 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,96,Cell 38 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,104,Cell 38 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,112,Cell 39 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,120,Cell 39 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,128,Cell 40 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,136,Cell 40 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,144,Cell 41 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,152,Cell 41 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,160,Cell 42 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,168,Cell 42 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,176,Cell 43 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,184,Cell 43 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,192,Cell 44 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,200,Cell 44 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,208,Cell 45 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,216,Cell 45 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,224,Cell 46 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,232,Cell 46 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,240,Cell 47 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,248,Cell 47 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,256,Cell 48 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,264,Cell 48 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,272,Cell 49 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,280,Cell 49 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,288,Cell 50 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,296,Cell 50 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,304,Cell 51 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,312,Cell 51 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,320,Cell 52 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,328,Cell 52 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,336,Cell 53 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,344,Cell 53 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,352,Cell 54 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,360,Cell 54 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,368,Cell 55 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,376,Cell 55 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,384,Cell 56 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,392,Cell 56 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,400,Cell 57 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,408,Cell 57 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,416,Cell 58 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,424,Cell 58 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,432,Cell 59 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,440,Cell 59 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,448,Cell 60 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,456,Cell 60 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,464,Cell 61 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,472,Cell 61 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,480,Cell 62 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,488,Cell 62 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 2,64.0,496,Cell 63 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 2,64.0,504,Cell 63 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,0,Cell 64 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,8,Cell 64 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,16,Cell 65 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,24,Cell 65 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,32,Cell 66 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,40,Cell 66 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,48,Cell 67 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,56,Cell 67 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,64,Cell 68 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,72,Cell 68 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,80,Cell 69 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,88,Cell 69 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,96,Cell 70 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,104,Cell 70 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,112,Cell 71 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,120,Cell 71 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,128,Cell 72 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,136,Cell 72 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,144,Cell 73 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,152,Cell 73 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,160,Cell 74 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,168,Cell 74 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,176,Cell 75 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,184,Cell 75 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,192,Cell 76 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,200,Cell 76 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,208,Cell 77 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,216,Cell 77 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,224,Cell 78 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,232,Cell 78 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,240,Cell 79 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,248,Cell 79 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,256,Cell 80 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,264,Cell 80 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,272,Cell 81 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,280,Cell 81 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,288,Cell 82 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,296,Cell 82 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,304,Cell 83 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,312,Cell 83 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,320,Cell 84 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,328,Cell 84 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,336,Cell 85 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,344,Cell 85 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,352,Cell 86 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,360,Cell 86 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,368,Cell 87 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,376,Cell 87 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,384,Cell 88 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,392,Cell 88 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,400,Cell 89 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,408,Cell 89 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,416,Cell 90 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,424,Cell 90 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,432,Cell 91 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,440,Cell 91 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,448,Cell 92 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,456,Cell 92 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,464,Cell 93 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,472,Cell 93 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,480,Cell 94 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,488,Cell 94 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 3,64.0,496,Cell 95 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 3,64.0,504,Cell 95 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,0,Cell 96 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,8,Cell 96 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,16,Cell 97 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,24,Cell 97 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,32,Cell 98 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,40,Cell 98 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,48,Cell 99 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,56,Cell 99 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,64,Cell 100 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,72,Cell 100 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,80,Cell 101 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,88,Cell 101 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,96,Cell 102 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,104,Cell 102 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,112,Cell 103 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,120,Cell 103 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,128,Cell 104 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,136,Cell 104 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,144,Cell 105 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,152,Cell 105 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,160,Cell 106 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,168,Cell 106 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,176,Cell 107 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,184,Cell 107 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,192,Cell 108 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,200,Cell 108 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,208,Cell 109 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,216,Cell 109 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,224,Cell 110 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,232,Cell 110 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,240,Cell 111 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,248,Cell 111 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,256,Cell 112 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,264,Cell 112 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,272,Cell 113 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,280,Cell 113 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,288,Cell 114 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,296,Cell 114 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,304,Cell 115 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,312,Cell 115 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,320,Cell 116 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,328,Cell 116 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,336,Cell 117 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,344,Cell 117 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,352,Cell 118 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,360,Cell 118 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,368,Cell 119 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,376,Cell 119 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,384,Cell 120 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,392,Cell 120 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,400,Cell 121 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,408,Cell 121 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,416,Cell 122 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,424,Cell 122 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,432,Cell 123 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,440,Cell 123 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,448,Cell 124 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,456,Cell 124 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,464,Cell 125 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,472,Cell 125 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,480,Cell 126 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,488,Cell 126 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 4,64.0,496,Cell 127 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 4,64.0,504,Cell 127 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,0,Cell 128 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,8,Cell 128 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,16,Cell 129 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,24,Cell 129 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,32,Cell 130 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,40,Cell 130 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,48,Cell 131 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,56,Cell 131 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,64,Cell 132 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,72,Cell 132 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,80,Cell 133 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,88,Cell 133 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,96,Cell 134 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,104,Cell 134 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,112,Cell 135 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,120,Cell 135 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,128,Cell 136 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,136,Cell 136 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,144,Cell 137 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,152,Cell 137 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,160,Cell 138 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,168,Cell 138 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,176,Cell 139 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,184,Cell 139 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,192,Cell 140 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,200,Cell 140 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,208,Cell 141 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,216,Cell 141 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,224,Cell 142 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,232,Cell 142 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,240,Cell 143 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,248,Cell 143 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,256,Cell 144 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,264,Cell 144 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,272,Cell 145 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,280,Cell 145 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,288,Cell 146 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,296,Cell 146 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,304,Cell 147 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,312,Cell 147 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,320,Cell 148 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,328,Cell 148 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,336,Cell 149 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,344,Cell 149 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,352,Cell 150 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,360,Cell 150 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,368,Cell 151 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,376,Cell 151 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,384,Cell 152 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,392,Cell 152 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,400,Cell 153 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,408,Cell 153 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,416,Cell 154 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,424,Cell 154 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,432,Cell 155 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,440,Cell 155 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,448,Cell 156 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,456,Cell 156 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,464,Cell 157 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,472,Cell 157 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,480,Cell 158 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,488,Cell 158 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+ACU Cell Data 5,64.0,496,Cell 159 Voltage,Cell  n voltage,0.0,255.0,,Volts,8,big_endian,False
+ACU Cell Data 5,64.0,504,Cell 159 Temp,Cell n temperature,0.0,255.0,0.25,Celsius,8,big_endian,False
+DC-DC Status,8.0,0,Input Voltage,~20v for LV (LV only. Send 0 for HV),0.0,16383.0,,Volts,16,big_endian,False
+DC-DC Status,8.0,16,Output Voltage,~12v for LV and ~20v for HV,0.0,16383.0,,Volts,16,big_endian,False
+DC-DC Status,8.0,32,Input Current,Input current (LV only. Send 0 for HV),0.0,16383.0,,Amps,16,big_endian,False
+DC-DC Status,8.0,48,Output Current,Output current,0.0,16383.0,,Amps,16,big_endian,False
+DC-DC Status,8.0,0,DC-DC Temp,Temp of DC-DC converter,0.0,255.0,1.0,Celsius,1,big_endian,False
+Inverter Status 1,6.0,0,AC current,"0.01 * current, int16_t",0.0,65535.0,,Amps,16,big_endian,False
+Inverter Status 1,6.0,16,DC current,"0.01 * current, int16_t",0.0,65535.0,0.01,Amps,16,big_endian,False
+Inverter Status 1,6.0,32,Motor RPM,"RPM, int16_t",0.0,65535.0,-32768.0,RPM,16,big_endian,False
+Inverter Status 2,6.0,0,U MOSFET temperature,"Celsius + 40, uint8_t",0.0,255.0,-40.0,Celsius,16,big_endian,False
+Inverter Status 2,6.0,16,V MOSFET temperature,"Celsius + 40, uint8_t",0.0,255.0,-40.0,Celsius,16,big_endian,False
+Inverter Status 2,6.0,32,W MOSFET temperature,"Celsius + 40, uint8_t",0.0,255.0,-40.0,Celsius,16,big_endian,False
+Inverter Status 3,3.0,0,Motor temperature,"Celsius + 40, uint8_t",0.0,255.0,-40.0,Celsius,16,big_endian,False
+Inverter Status 3,3.0,16,Over voltage faults,TS above set max voltage,0.0,1.0,,Bool,1,big_endian,False
+Inverter Status 3,3.0,17,Under voltage fault,TS below set min voltage,0.0,1.0,,Bool,1,big_endian,False
+Inverter Status 3,3.0,18,Inv. overtemp fault,Inverter over set max temp,0.0,1.0,,Bool,1,big_endian,False
+Inverter Status 3,3.0,19,Motor overtemp fault,Motor over set max temp,0.0,1.0,,Bool,1,big_endian,False
+Inverter Status 3,3.0,20,Transistor fault,Mosfet or mosfet drive error,0.0,1.0,,Bool,1,big_endian,False
+Inverter Status 3,3.0,21,Encoder fault,Encoder communication or calc error,0.0,1.0,,Bool,1,big_endian,False
+Inverter Status 3,3.0,22,CAN fault,CAN message error or timeout,0.0,1.0,,Bool,1,big_endian,False
+Inverter Status 3,3.0,23,Future use,,0.0,1.0,,Bool,1,big_endian,False
+Inverter Config,7.0,0,Max AC Current,Max AC Current,0.0,65535.0,,Amps,16,big_endian,False
+Inverter Config,7.0,16,Max DC Current,Max DC Current,0.0,65535.0,,Amps,16,big_endian,False
+Inverter Config,7.0,32,Absolute Max RPM Limit,0: No limit      n :limited at n RPM,0.0,65535.0,-32768.0,RPM,16,big_endian,False
+Inverter Config,7.0,48,Motor direction,Write 1 inverts direction,0.0,1.0,,Enable,1,big_endian,False
+Inverter Config,7.0,49,Field weakening,Write 1 to enable field weakening,0.0,1.0,,Enable,7,big_endian,False
+Inverter Command,7.0,0,Set AC Current,Commanded AC Current,0.0,65535.0,,Amps,16,big_endian,False
+Inverter Command,7.0,16,Set DC Current,Commanded DC Current,0.0,65535.0,,Amps,16,big_endian,False
+Inverter Command,7.0,32,RPM Limit,0: No limit      n :limited at n RPM,0.0,65535.0,-32768.0,RPM,16,big_endian,False
+Inverter Command,7.0,48,Drive enable,Write this to 1 every 100ms to enable inverter,0.0,1.0,,Enable,8,big_endian,False
+Fan Status,4.0,0,Fan Speed,Fan RPM,0.0,65535.0,1.0,RPM,16,big_endian,False
+Fan Status,4.0,16,Input Voltage,0-22,0.0,255.0,0.1,Volts,8,big_endian,False
+Fan Status,4.0,24,Input Current,0-10,0.0,255.0,0.1,Amps,8,big_endian,False
+Fan Command,1.0,0,Fan Command,0-100 Percent,0.0,255.0,1.0,%,8,big_endian,False
+Dash Status,3.0,0,BMS LED,State of BMS LED,0.0,1.0,,Bool,1,big_endian,False
+Dash Status,3.0,1,IMD LED,State of IMD LED,0.0,1.0,,Bool,1,big_endian,False
+Dash Status,3.0,2,BSPD LED,State of BSPD LED,0.0,1.0,,Bool,6,big_endian,False
+Dash Status,3.0,8,TS Button Data,"MSB is state (1: pressed)
+Other 7 bits represent the time in 0.1s that it has been in that state",-128.0,127.0,,Seconds,8,big_endian,False
+Dash Status,3.0,16,RTD Button Data,"MSB is state (1: pressed)
+Other 7 bits represent the time in 0.1s that it has been in that state",-128.0,127.0,,Seconds,8,big_endian,False
+Dash Config,7.0,0,BMS LED,"LED command (0: off, 1: on)",0.0,1.0,,Bool,1,big_endian,False
+Dash Config,7.0,1,IMD LED,"LED command (0: off, 1: on)",0.0,1.0,,Bool,1,big_endian,False
+Dash Config,7.0,2,BSPD LED,"LED command (0: off, 1: on)",0.0,1.0,,Bool,6,big_endian,False
+Dash Config,7.0,8,Button LED 1 R,RGB LED Brightness,0.0,255.0,1.0,RGB,8,big_endian,False
+Dash Config,7.0,16,Button LED 1 G,RGB LED Brightness,0.0,255.0,1.0,RGB,8,big_endian,False
+Dash Config,7.0,24,Button LED 1 B,RGB LED Brightness,0.0,255.0,1.0,RGB,8,big_endian,False
+Dash Config,7.0,32,Button LED 2 R,RGB LED Brightness,0.0,255.0,1.0,RGB,8,big_endian,False
+Dash Config,7.0,40,Button LED 2 G,RGB LED Brightness,0.0,255.0,1.0,RGB,8,big_endian,False
+Dash Config,7.0,48,Button LED 2 B,RGB LED Brightness,0.0,255.0,1.0,RGB,8,big_endian,False
+Steering Status,4.0,0,Current Encoder,Position of knob (1-16),0.0,15.0,1.0,Position,4,big_endian,False
+Steering Status,4.0,4,Torque Map Encoder,Position of knob (1-16),0.0,15.0,1.0,Position,4,big_endian,False
+Steering Status,4.0,8,Regen,Position of knob (1-16),0.0,255.0,1.0,Position,1,big_endian,False
+Steering Status,4.0,9,Button 1,Button State,0.0,1.0,,Bool,1,big_endian,False
+Steering Status,4.0,10,Button 2,Button State,0.0,1.0,,Bool,1,big_endian,False
+Steering Status,4.0,11,Button 3,Button State,0.0,1.0,,Bool,1,big_endian,False
+Steering Status,4.0,12,Button 4,Button State,0.0,1.0,,Bool,20,big_endian,False
+Steering Config,0.0,0,Reserved,Theoretically Steering wheel will just update based on ECU status,,,,,1,big_endian,False
+SAM Brake IR,1.0,0,Temp,IR Temp of Brakes,0.0,255.0,1.0,Celsius,8,big_endian,False
+SAM Tire Temp,4.0,0,Outside Temp,Furthest from chassis,0.0,255.0,1.0,Celsius,8,big_endian,False
+SAM Tire Temp,4.0,8,Outside Middle Temp,Middle of tire,0.0,255.0,1.0,Celsius,8,big_endian,False
+SAM Tire Temp,4.0,16,Inside Middle Temp,Middle of tire,0.0,255.0,1.0,Celsius,8,big_endian,False
+SAM Tire Temp,4.0,24,Inside Temp,Closest to chassis,0.0,255.0,1.0,Celsius,8,big_endian,False
+SAM IMU,12.0,0,Accel X,Acceleration in X-axis,0.0,65535.0,,Meters/s^2,16,big_endian,False
+SAM IMU,12.0,16,Accel Y,Acceleration in Y-axis,0.0,65535.0,,Meters/s^2,16,big_endian,False
+SAM IMU,12.0,32,Accel Z,Acceleration in Z-axis,0.0,65535.0,,Meters/s^2,16,big_endian,False
+SAM IMU,12.0,48,Gyro X,Angular velocity in X-axis,0.0,65535.0,,Meters/s^2,16,big_endian,False
+SAM IMU,12.0,64,Gyro Y,Angular velocity in Y-axis,0.0,65535.0,,Meters/s^2,16,big_endian,False
+SAM IMU,12.0,80,Gyro Z,Angular velocity in Z-axis,0.0,65535.0,,Meters/s^2,16,big_endian,False
+SAM GPS 1,8.0,0,Lat,Latitude in decimal degrees,0.0,,,Degrees,32,big_endian,False
+SAM GPS 1,8.0,32,Long,Longitude in decimal degrees,0.0,,,Degrees,32,big_endian,False
+SAM GPS 2,8.0,0,Accuracy,GPS position accuracy,0.0,,,,32,big_endian,False
+SAM GPS 2,8.0,32,Attitude,Vehicle attitude,0.0,,,,32,big_endian,False
+SAM GPS Time,8.0,0,Time,Time in seconds since GPS Epoch,0.0,,,,32,big_endian,False
+SAM GPS Time,8.0,32,Time of Week Ms,Time of week in milliseconds,0.0,,,,32,big_endian,False
+SAM GPS Heading,4.0,0,Heading from North,Heading angle relative to true North,0.0,,,,32,big_endian,False
+SAM Sus Pots,1.0,0,Suspension Angle,Pot Pos,0.0,255.0,1.0,degrees,8,big_endian,False
+SAM TOF,2.0,0,Height,Ride Height,0.0,65535.0,,mm,16,big_endian,False
+SAM Rear Wheelspeed,2.0,0,Speed,Wheel RPM,0.0,65535.0,,RPM,16,big_endian,False
+SAM Pushrod Force,2.0,0,Load Force,Pushrod Force,0.0,65535.0,,N,16,big_endian,False
+TCM Status,8.0,0,Connection Status,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+TCM Status,8.0,1,MQTT Status,"1: OK, 0: Timeout",0.0,1.0,,Bool,1,big_endian,False
+TCM Status,8.0,2,Epic Shelter Status,"1: In Progress, 0: Idle",0.0,1.0,,Bool,1,big_endian,False
+TCM Status,8.0,3,Camera Status,"1: Recording, 0: Idle",0.0,1.0,,Bool,1,big_endian,False
+TCM Status,8.0,4,Reserved,Reserved,,,,,4,big_endian,False
+TCM Status,8.0,8,Ping,Mapache ping (upload),0.0,65535.0,,ms,16,big_endian,False
+TCM Status,8.0,24,Cache Size,# of messages on cache (non-synced),0.0,,,#,32,big_endian,False
+TCM Status,8.0,56,Reserved,,,,,,8,big_endian,False
+TCM Resource Utilization,7.0,0,CPU Usage,,0.0,255.0,,%,8,big_endian,False
+TCM Resource Utilization,7.0,8,GPU Usage,,0.0,255.0,,%,8,big_endian,False
+TCM Resource Utilization,7.0,16,Memory Usage,,0.0,255.0,,%,8,big_endian,False
+TCM Resource Utilization,7.0,24,Storage Usage,,0.0,255.0,,%,8,big_endian,False
+TCM Resource Utilization,7.0,32,Power Consumption,,0.0,255.0,,Watts,8,big_endian,False
+TCM Resource Utilization,7.0,40,CPU Temp,,0.0,255.0,,Celsius,8,big_endian,False
+TCM Resource Utilization,7.0,48,GPU Temp,,0.0,255.0,,Celsius,8,big_endian,False

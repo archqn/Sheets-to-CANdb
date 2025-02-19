@@ -222,7 +222,6 @@ BO_ 4 ACU_Status: 24 ACU
 
 
 
-
 BO_ 5 ACU_Precharge: 1 ACU
 
  SG_ Set_TS_Active : 0|8@1+ (1,0) [0.0|1.0] "Bool" Vector__XXX
@@ -234,7 +233,6 @@ BO_ 6 ACU_Config_Charge_Parameters: 4 ACU
  SG_ Charge_Current : 16|16@1+ (1,0) [0.0|65535.0] "Amps" Vector__XXX
 
  SG_ Charge_Voltage : 0|16@1+ (1,0) [0.0|65535.0] "Volts" Vector__XXX
-
 
 
 
@@ -378,7 +376,6 @@ BO_ 8 ACU_Cell_Data_1: 64 ACU
 
 
 
-
 BO_ 9 ACU_Cell_Data_2: 64 ACU
 
  SG_ Cell_63_Temp : 504|8@1+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
@@ -508,7 +505,6 @@ BO_ 9 ACU_Cell_Data_2: 64 ACU
  SG_ Cell_32_Temp : 8|8@1+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
 
  SG_ Cell_32_Voltage : 0|8@1+ (1,0) [0.0|255.0] "Volts" Vector__XXX
-
 
 
 
@@ -644,7 +640,6 @@ BO_ 10 ACU_Cell_Data_3: 64 ACU
 
 
 
-
 BO_ 11 ACU_Cell_Data_4: 64 ACU
 
  SG_ Cell_127_Temp : 504|8@1+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
@@ -774,7 +769,6 @@ BO_ 11 ACU_Cell_Data_4: 64 ACU
  SG_ Cell_96_Temp : 8|8@1+ (1,0) [0.0|255.0] "Celsius" Vector__XXX
 
  SG_ Cell_96_Voltage : 0|8@1+ (1,0) [0.0|255.0] "Volts" Vector__XXX
-
 
 
 
@@ -986,11 +980,11 @@ BO_ 15 DTI_Inverter_Config: 5 DTI_Inverter
 
 BO_ 16 DTI_Inverter_Config_Operational_: 9 DTI_Inverter
 
- SG_ _Max_Brake_DC_Current : 38|34@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Max_Brake_DC_Current : 38|34@1+ (1,0) [0|0] "" Vector__XXX
 
  SG_ Max_DC_Current : 37|1@1+ (1,0) [0|0] "" Vector__XXX
 
- SG_ _Max_Brake_AC_Current : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Max_Brake_AC_Current : 36|1@1+ (1,0) [0|0] "" Vector__XXX
 
  SG_ Max_AC_Current : 35|1@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -1003,9 +997,11 @@ BO_ 17 DTI_set_AC_Current: 2 DTI_Inverter
  SG_ AC_Current : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 
+
 BO_ 18 DTI_set_Target_Brake_Current: 2 DTI_Inverter
 
  SG_ Target_Brake_Current : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 BO_ 19 DTI_set_Target_ERPM: 4 DTI_Inverter
@@ -1019,9 +1015,11 @@ BO_ 20 DTI_set_Target_Position: 2 DTI_Inverter
  SG_ Target_Position : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 
+
 BO_ 21 DTI_set_Relative_AC_Current: 2 DTI_Inverter
 
  SG_ Relative_AC_Current : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 BO_ 22 DTI_set_Relative_AC_Brake_Curren: 2 DTI_Inverter
@@ -1243,83 +1241,5 @@ BO_ 238 Debug_Enable: 2 Debugger
  SG_ Debug_ACU : 1|1@1+ (1,0) [0|0] "" Vector__XXX
 
  SG_ Debug_ECU : 0|1@1+ (1,0) [0.0|1.0] "Bool" Vector__XXX
-
-
-
-
-
-
-
-
-
-
-
-
-BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
-
-BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
-
-BA_DEF_  "DBName" STRING ;
-
-BA_DEF_  "BusType" STRING ;
-
-BA_DEF_ BU_  "NodeLayerModules" STRING ;
-
-BA_DEF_ BU_  "ECU" STRING ;
-
-BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
-
-BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
-
-BA_DEF_ BU_  "CANoeDrift" INT 0 0;
-
-BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
-
-BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
-
-BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
-
-BA_DEF_DEF_  "MultiplexExtEnabled" "No";
-
-BA_DEF_DEF_  "CANFD_BRS" "1";
-
-BA_DEF_DEF_  "DBName" "";
-
-BA_DEF_DEF_  "BusType" "";
-
-BA_DEF_DEF_  "NodeLayerModules" "";
-
-BA_DEF_DEF_  "ECU" "";
-
-BA_DEF_DEF_  "CANoeJitterMax" 0;
-
-BA_DEF_DEF_  "CANoeJitterMin" 0;
-
-BA_DEF_DEF_  "CANoeDrift" 0;
-
-BA_DEF_DEF_  "CANoeStartDelay" 0;
-
-BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
-
-BA_DEF_DEF_  "SystemMessageLongSymbol" "";
-
-BA_ "BusType" "CAN FD";
-
-BA_ "DBName" "CAN_DBC";
-
-BA_ "VFrameFormat" BO_ 2147483648 1;
-
-BA_ "SystemMessageLongSymbol" BO_ 7 "ACU_Config_Operational_Parameters";
-
-BA_ "SystemMessageLongSymbol" BO_ 16 "DTI_Inverter_Config_Operational_Parameters";
-
-BA_ "SystemMessageLongSymbol" BO_ 22 "DTI_set_Relative_AC_Brake_Current";
-
-
-
-
-
-
-
 
 

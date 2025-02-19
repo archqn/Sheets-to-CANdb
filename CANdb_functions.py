@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import re
 import cantools
 from cantools.database import Database
 from cantools.database.can import Node, Message, Signal
@@ -8,7 +9,7 @@ from cantools.database.can import Node, Message, Signal
 # Directories
 base_dir = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(os.path.join(base_dir, "DBCs"), exist_ok=True)
-dbc_file = os.path.join(base_dir, "DBCs", "GR25_CAN.dbc")
+dbc_file = os.path.join(base_dir, "DBCs", "SIGNALS_GR25_CAN.dbc")
 base_dbc = "DBCs/Base.dbc"
 
 # ------------------------- NODES -------------------------
@@ -54,15 +55,72 @@ def addMessages(CANdb, message_csv="CSVs/MESSAGES.csv"):
 
 
 
+# ------------------------- SIGNALS -------------------------
+def addSignals(CANdb, signal_csv="CSVs/SIGNALS.csv"):
+    signals = pd.read_csv(signal_csv)
+    
+    existing_signals = {
+        (msg.name, signal.name): signal for msg in CANdb.messages for signal in msg.signals
+    }
+
+    for _, row in signals.iterrows():
+        # Normalize and replace spaces/dashes in the signal name
+        signal_name = re.sub(r'[^a-zA-Z0-9]', '_', row["Signal Name"])
+        message_name = row["Message Name"].replace(" ", "_").replace("-", "_")
+
+        # Signal parameters
+        bit_start = int(row["Bit Start"])
+        signal_length = int(row["Signal Length"])
+        byte_order = row["Byte Order"].lower()
+        # print(byte_order)
+        is_signed = bool(row["Signed"])
+
+        # Optional parameters
+        minimum = row["Min"] if not pd.isna(row["Min"]) else None
+        maximum = row["Max"] if not pd.isna(row["Max"]) else None
+        unit = row["Unit"] if not pd.isna(row["Unit"]) else ""
+        comment = row["Comment"] if not pd.isna(row["Comment"]) else ""
+
+        # Find the message to which this signal belongs
+        target_message = next((msg for msg in CANdb.messages if msg.name == message_name), None)
+
+        if target_message and (message_name, signal_name) not in existing_signals:
+            # Create a new Signal object
+            signal = Signal(
+                name=signal_name,
+                start=bit_start,
+                length=signal_length,
+                byte_order=byte_order,
+                is_signed=is_signed,
+                minimum=minimum,
+                maximum=maximum,
+                unit=unit,
+                comment=comment,
+            )
+
+            # Add the signal to the target message
+            target_message.signals.append(signal)
+            existing_signals[(message_name, signal_name)] = signal
+
+    return
+
+
+
+
+
 if __name__ == "__main__":
     CANdb = cantools.database.load_file(base_dbc)
-    addNodes(CANdb, node_csv="CSVs/NODES.csv")
-    
+    addNodes(CANdb)
+    addMessages(CANdb)
+    addSignals(CANdb)
+
     # CANdb = cantools.database.load_file(dbc_file)
 
 
-    addMessages(CANdb)
     with open(dbc_file, "w", encoding="utf-8") as f:
         f.write(CANdb.as_dbc_string())
+
+
+    # MUST MANUALLY CONVERT LINES 215, 217, 1300, 1302 (SIGNALS CANT BEGIN WITH NUMBERS)
 
     print("success")

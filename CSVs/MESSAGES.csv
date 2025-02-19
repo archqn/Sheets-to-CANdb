@@ -1,36 +1,44 @@
 MSG ID,Message Name,Length,Sender
-0x000,Debug,64.0,Debugger
-0x001,Ping,4.0,ECU
-0x002,ECU status,44.0,ECU
-0x003,ECU config,0.0,ECU
-0x004,ACU Status,24.0,ACU
-0x005,ACU Precharge,1.0,ACU
-0x006,ACU Config Charge Parameters,4.0,ACU
-0x007,ACU Config Operational Parameters,2.0,ACU
-0x008,ACU Cell Data 1,64.0,ACU
-0x009,ACU Cell Data 2,64.0,ACU
-0x00A,ACU Cell Data 3,64.0,ACU
-0x00B,ACU Cell Data 4,64.0,ACU
-0x00C,ACU Cell Data 5,64.0,ACU
-0x00D,LV DC-DC Status,8.0,LV_DC_DC
-0x00E,DTI Inverter Status,32.0,DTI_Inverter
-0x00F,DTI Inverter Config,5.0,DTI_Inverter
-0x010,DTI Inverter Config Operational Parameters,9.0,DTI_Inverter
-0x011,DTI set AC Current,2.0,DTI_Inverter
-0x012,DTI set Target Brake Current,2.0,DTI_Inverter
-0x013,DTI set Target ERPM,4.0,DTI_Inverter
-0x014,DTI set Target Position,2.0,DTI_Inverter
-0x015,DTI set Relative AC Current,2.0,DTI_Inverter
-0x016,DTI set Relative AC Brake Current,2.0,DTI_Inverter
-0x017,GR Inverter Status,19.0,GR_Inverter_1
-0x018,GR Inverter Config,5.0,GR_Inverter_1
-0x019,Fan Status,5.0,Fan_Controller_1
-0x01A,Fan Config,4.0,Fan_Controller_1
-0x01B,Dash Status,1.0,Dash_Panel
-0x01C,Dash Config,7.0,Dash_Panel
-0x01D,Steering Status,2.0,Steering_Wheel
-0x01E,Steering Config,0.0,Steering_Wheel
-0x01F,SAM Brake Temp,4.0,SAM1
-0x020,SAM Tire Gradient,8.0,SAM1
-0x021,SAM IMU,20.0,SAM1
-0x0EE,Debug Enable,2.0,Debugger
+0x000,Debug 2.0,8.0,Debugger
+0x001,Debug FD,64.0,Debugger
+0x002,Ping,4.0,ECU
+0x003,ECU Status 1,8.0,ECU
+0x004,ECU Status 2,8.0,ECU
+0x005,ECU Status 3,4.0,ECU
+0x006,ECU config,0.0,ECU
+0x007,ACU Status 1,8.0,ECU
+0x008,ACU Status 2,8.0,ECU
+0x009,ACU Status 3,8.0,ECU
+0x00A,ACU Precharge,1.0,ECU
+0x00B,ACU Config Charge Parameters,4.0,ECU
+0x00C,ACU Config Operational Parameters,2.0,ECU
+0x00D,ACU Cell Data 1,64.0,ECU
+0x00E,ACU Cell Data 2,64.0,ECU
+0x00F,ACU Cell Data 3,64.0,ECU
+0x010,ACU Cell Data 4,64.0,ECU
+0x011,ACU Cell Data 5,64.0,ECU
+0x012,DC-DC Status,8.0,ECU
+0x013,Inverter Status 1,6.0,ECU
+0x014,Inverter Status 2,6.0,ECU
+0x015,Inverter Status 3,3.0,ECU
+0x016,Inverter Config,7.0,ECU
+0x017,Inverter Command,7.0,ECU
+0x018,Fan Status,4.0,ECU
+0x019,Fan Command,1.0,ECU
+0x01A,Dash Status,3.0,ECU
+0x01B,Dash Config,7.0,ECU
+0x01C,Steering Status,4.0,ECU
+0x01D,Steering Config,0.0,ECU
+0x01E,SAM Brake IR,1.0,ECU
+0x01F,SAM Tire Temp,4.0,ECU
+0x020,SAM IMU,12.0,ECU
+0x021,SAM GPS 1,8.0,ECU
+0x022,SAM GPS 2,8.0,ECU
+0x023,SAM GPS Time,8.0,ECU
+0x024,SAM GPS Heading,4.0,ECU
+0x025,SAM Sus Pots,1.0,ECU
+0x026,SAM TOF,2.0,ECU
+0x027,SAM Rear Wheelspeed,2.0,ECU
+0x026,SAM Pushrod Force,2.0,ECU
+0x029,TCM Status,8.0,ECU
+0x02A,TCM Resource Utilization,7.0,ECU
